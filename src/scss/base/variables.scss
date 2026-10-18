@@ -1,0 +1,27 @@
+@use 'mixins' as *;
+
+$font-size: to-rem(15); // 15(px) - размер шрифта по умолчанию
+
+$title-h1: to-rem(52);
+$title-h2: to-rem(23);
+// $title-h3: to-rem(18);
+
+$title-h1-tablet: to-rem(35);
+$title-h2-tablet: to-rem(20);
+// $title-h3: to-rem(18);
+
+// Минимальная ширина страницы
+$min-width: 320;
+// Ширина полотна (макета)
+$max-width: 1920;
+$max-width-container: 1920;
+
+$container-padding: 64;
+$container-padding-medium: 48;
+$container-padding-smal: 24;
+
+$pc: to-em($max-width);            // ПК, ноуты
+$pc-small: to-em(1220);          // ПК,ноуты 
+$tablet: to-em(1024);              // Планшеты
+$mobile: to-em(780);               // Телефоны L
+$mobile-small: to-em(480);         // Телефоны S

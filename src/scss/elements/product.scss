@@ -1,0 +1,47 @@
+@use '../base/variables' as *;
+@use '../base/mixins' as *;
+
+// Цена
+.product-price {
+    display: block;
+    white-space: nowrap;
+}
+
+// Текущая
+.product-price__current {
+    display: block;
+    font-size: to-rem(19);
+    font-weight: 500;
+    letter-spacing: -.02em;
+    color: #29312d;
+}
+
+// Старая
+.product-price__old {
+    color: #9b9e97;
+    font-size: to-rem(12);
+    text-decoration: line-through;
+}
+
+// Индикация наличия
+.text-stock {
+    display: inline-flex;
+    align-items: center;
+    gap: to-rem(6);
+    color: #6c736b;
+    font-size: to-rem(11);
+
+    &::before {
+        content: "";
+
+        display: inline-block;
+        width: to-rem(7);
+        height: to-rem(7);
+        border-radius: 50%;
+        background: #609762;
+    }
+    
+    &.text-stock_ended::before  {
+        background: red;
+    }
+}

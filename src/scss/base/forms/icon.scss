@@ -1,0 +1,33 @@
+@use '../variables' as *;
+@use '../mixins' as *;
+
+.icon-medium,
+.icon-smail {
+    svg {
+        fill: transparent;
+        stroke: currentColor;
+        stroke-width: 1.65;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+
+        path {
+            transition: fill .3s ease;
+        }
+    }
+
+    &:hover path {
+        fill: currentColor;
+    }
+}
+
+// Средняя иконка
+.icon-medium svg {
+    width: to-rem(21);
+    height: to-rem(21);
+}
+
+// Маленькая иконка
+.icon-smail svg {
+    width: to-rem(17);
+    height: to-rem(17);
+}

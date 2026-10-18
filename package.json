@@ -1,0 +1,26 @@
+{
+  "name": "teaboom-layout",
+  "version": "1.0.0",
+  "description": "Шаблон фронтенд-разработки на Gulp без фреймворков",
+  "type": "module",
+  "scripts": {
+    "dev": "gulp",
+    "build": "gulp build",
+    "build:dev": "gulp buildDev"
+  },
+  "engines": {
+    "node": "^20.19.0 || >=22.12.0"
+  },
+  "devDependencies": {
+    "gulp": "^5.0.1",
+    "gulp-autoprefixer": "^10.0.0",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-nunjucks-render": "^2.2.3",
+    "gulp-plumber": "^1.2.1",
+    "gulp-sass": "^6.0.1",
+    "gulp-sourcemaps": "^3.0.0",
+    "gulp-terser": "^2.1.0",
+    "sass": "^1.105.2",
+    "vite": "^8.3.4"
+  }
+}

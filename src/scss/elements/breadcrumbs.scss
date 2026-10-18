@@ -1,0 +1,37 @@
+@use '../base/mixins' as *;
+
+.breadcrumbs {
+    margin: to-rem(20) 0 to-rem(12);
+
+    &__list {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        font-weight: 400;
+        font-size: to-rem(14);
+        line-height: 1.5;
+        color: var(--green-gray);
+
+        a {
+            display: flex;
+            align-items: center;
+            transition: color 0.3s ease 0s;
+            
+            @media (any-hover: hover) {
+                &:hover {
+                    color: var(--green-dark);
+                }
+            }
+        }
+
+        a::after {
+            content: '';
+            display: inline-block;
+            width: to-rem(4);
+            height: to-rem(4);
+            margin: 0 to-rem(8);
+            border-radius: 50%;
+            background-color: var(--green-gray);
+        }
+    }
+}

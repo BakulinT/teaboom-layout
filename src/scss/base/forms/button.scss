@@ -1,0 +1,41 @@
+@use '../variables' as *;
+@use '../mixins' as *;
+
+// Стандартные кнопки
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    // border: rem(1) solid;
+
+    text-align: center;
+    cursor: pointer;
+
+    &:disabled {
+        background: var(--green-gray);
+        pointer-events: none;
+    }
+}
+
+// Средняя кнопка
+.btn-medium {
+    border-radius: to-rem(8);
+    font-size: to-rem(16);
+    font-weight: 500;
+}
+
+// Маленькая кнопка
+.btn-smail {
+    border-radius: to-rem(8);
+    font-size: to-rem(12);
+    font-weight: 500;
+}
+
+// Кнопка активна
+.btn_active {
+    font-weight: 600;
+
+    path {
+        fill: #59615a;
+    }
+}

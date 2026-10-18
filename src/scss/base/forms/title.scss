@@ -1,0 +1,32 @@
+// Заголовки// Переменные
+@use '../variables' as *;
+
+.title-h1,
+.title-h2,
+.title-h3 {
+    line-height: 120%;
+    font-family: var(--font-serif);
+}
+
+.title-h1 {
+    font-size: $title-h1;
+    font-weight: 700;
+
+    @media (max-width: $tablet) {
+        font-size: $title-h1-tablet;
+    }
+}
+
+.title-h2 {
+    font-size: $title-h2;
+    font-weight: 600;
+
+    // @media (max-width: $tablet) {
+    //     font-size: $title-h2-tablet;
+    // }
+}
+
+// .title-h3 {
+//     font-size: $title-h3;
+//     font-weight: 600;
+// }

@@ -1,0 +1,75 @@
+@use '../base/variables' as *;
+@use '../base/mixins' as *;
+
+.buttons-actions {
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+    gap: to-rem(18);
+    min-height: to-rem(32);
+    margin: 0 to-rem(7) to-rem(19);
+    cursor: pointer;
+}
+
+.buttons-actions__divider {
+    width: to-rem(1);
+    height: to-rem(16);
+    background: #deded4;
+}
+
+.btn-action {
+    gap: to-rem(9);
+    padding: 0;
+    border: 0;
+    background: transparent;
+    color: #59615a;
+    font-size: to-rem(13);
+    white-space: nowrap;
+    cursor: pointer;
+    transition: color .2s ease;
+
+    &:hover {
+        color: var(--green-dark);
+    }
+}
+
+// Кнопка купить
+.btn-buy {
+    gap: to-rem(8);
+    width: 100%;
+    min-height: to-rem(38);
+    padding: to-rem(8) to-rem(10);
+    // border: 1px solid var(--green-dark);
+    border-radius: to-rem(13);
+    background: linear-gradient(140deg, #81906d, #657653);
+    color: #fff;
+    white-space: nowrap;
+    box-shadow: 0 to-rem(2) to-rem(3) rgba(57, 71, 47, .06);
+    transition: filter .2s ease, transform .2s ease;
+
+    &:hover {
+        filter: brightness(1.05);
+    }
+
+    &.is-active path {
+        fill: currentColor;
+    }
+}
+
+// Кнопка увеличить
+.btn-zoom {
+    place-items: center;
+    width: to-rem(42);
+    height: to-rem(42);
+    padding: 0;
+    border: to-rem(1) solid rgba(226, 224, 214, .7);
+    border-radius: 50%;
+    background: rgba(255, 254, 250, .96);
+    color: var(--ink);
+    cursor: pointer;
+    transition: background .2s ease;
+
+    &:hover {
+        background: #fff;
+    }
+}

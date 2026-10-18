@@ -1,0 +1,49 @@
+@use 'sass:math';
+
+@use 'mixins' as *;
+
+// Заголовки// Переменные
+@use 'variables' as *;
+
+@use 'forms/title';
+
+// Кнопки
+@use 'forms/button';
+
+// Иконки
+@use 'forms/icon';
+
+// Изображения
+@use 'forms/image';
+
+body.lock {
+    overflow: hidden;
+    -ms-touch-action: none;
+    touch-action: none;
+}
+
+.wrapper {
+	padding-top: to-rem(60);
+	padding-bottom: to-rem(120);
+    background: radial-gradient(ellipse at 12% 22%, rgba(255, 255, 255, .85), transparent 48%), linear-gradient(135deg, #faf9f5 0%, #f6f5ef 56%, #f9f8f2 100%);
+    
+	@media (max-width: $tablet) {
+		padding-top: to-rem(35);
+		padding-bottom: to-rem(80);
+	}
+}
+
+.container {
+    max-width: to-rem($max-width-container);
+    padding: 0 to-rem(math.div($container-padding, 2));
+    box-sizing: content-box;
+    margin: 0 auto;
+
+    @media (max-width: $pc-small) {
+	    padding: 0 to-rem(math.div($container-padding-medium, 2));
+    }
+
+    @media (max-width: $tablet) {
+	    padding: 0 to-rem(math.div($container-padding-smal, 2));
+    }
+}

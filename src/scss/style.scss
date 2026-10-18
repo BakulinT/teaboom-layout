@@ -1,0 +1,17 @@
+// Подключение миксинов
+@use 'base/mixins' as *;
+
+// Определение :root 
+@use 'base/root';
+
+// Обнуление
+@use 'base/null';
+
+// Подключение базовых стилей
+@use 'base/base';
+
+// Подключение стилей общих элементов проекта
+@use 'elements/elements';
+
+// Стили отдельных страниц
+@use 'product-card';
