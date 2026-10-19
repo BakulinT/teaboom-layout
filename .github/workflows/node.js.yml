@@ -21,11 +21,16 @@ jobs:
 
     steps:
     - uses: actions/checkout@v4
-    - name: Use Node.js ${{ matrix.node-version }}
+    - name: Set up Node.js
       uses: actions/setup-node@v4
       with:
-        node-version: ${{ matrix.node-version }}
-        cache: 'npm'
+        node-version: 22
+        cache: npm
+
+    - name: Check Node.js version
+      run: |
+        node --version
+        npm --version
     - run: npm ci
     - run: npm run build
     - name: Add .nojekyll
