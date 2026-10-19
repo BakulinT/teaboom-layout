@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", function() {
     const modalMessage = document.querySelector(".modal-message");
     const popupImage = document.getElementById("popup-gallery");
 
-    // Модалка под уведолмения
+    // Модалка под уведолмение
     function showModal(message) {
         if (!modalMessage) return;
 
@@ -81,5 +81,6 @@ document.addEventListener("DOMContentLoaded", function() {
         btn.addEventListener("click", hindePopap);
     });
 
+    // Заглушка добавление в вишлист
     document.querySelector("[data-favorites-trigger]")?.addEventListener("click", onFavorite);
 });

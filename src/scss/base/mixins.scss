@@ -1,11 +1,11 @@
 @use 'sass:math';
 
-//REM
+// REM
 @function to-rem($px) {
 	@return math.div($px, 16) + rem;
 }
 
-//EM
+// EM
 @function to-em($px, $current: 16) {
 	@return math.div($px, $current) + em;
 }

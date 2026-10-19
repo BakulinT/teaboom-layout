@@ -1,3 +1,5 @@
+{% set assetSuffix = '.min' if isProd else '' %}
+
 <!DOCTYPE html>
 <html lang="ru">
 <head>
@@ -12,7 +14,7 @@
 		<div class="container">
 			<div class="breadcrumbs">
 				<nav class="breadcrumbs__list" aria-label="Хлебные крошки">
-					<a href="#">Главаня</a>
+					<a href="#">Главная</a>
 					<a href="#">Каталог</a>
 					<a href="#">Улун</a>
 					<a href="#">Ароматизированный улун</a>
@@ -301,7 +303,7 @@
 					<div class="sidebar-body">
 						<nav class="category-list" aria-label="Категории товаров">
 							<a href="#">Подарки <span>›</span></a>
-							<a href="#" class="is-current">Матча <span>›</span></a>
+							<a href="#">Матча <span>›</span></a>
 							<a href="#">Черный чай <span>›</span></a>
 							<a href="#">Чай зелёный с чёрным ароматизированный<span>›</span></a>
 							<a href="#">Зеленый чай <span>›</span></a>
@@ -340,7 +342,7 @@
 	<!-- Уведомление -->
 	<div class="modal-message" role="status" aria-live="polite" data-message></div>
 
-	<link rel="stylesheet" href="css/style.css">
-	<script src="js/theme.js"></script>
+	<link rel="stylesheet" href="css/style{{ assetSuffix }}.css">
+	<script src="js/theme{{ assetSuffix }}.js"></script>
 </body>
 </html>
